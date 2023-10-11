@@ -1,0 +1,19 @@
+{% extends 'app/dummy.html' %}
+
+
+{% block title  %}
+        <title>Create page</title>
+{% endblock %}
+
+
+{% block body_block %}
+    <h1>Create School Form</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+            {{form.as_p}}
+        <input type="submit" value="Create">
+
+    </form>
+{% endblock %}
